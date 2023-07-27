@@ -1,0 +1,39 @@
+ALGORITHM Nb_caracter
+VAR
+    str:STRING:="the best in the world"
+    count:INTEGER:=0;
+BEGIN
+    FOR (int i:-0,i<str.length(),i++) DO
+        IF(str.charAt[i]) THEN
+            count++;
+        END_IF
+    END_For
+    WRITE(count)        
+END
+ALGORITHM nb_words
+VAR
+    str:STRING:="the best in the world"
+    count:INTEGER:=0;
+BEGIN
+    FOR (int i:-0,i<str.length(),i++) DO
+        IF(str[i]==" ") THEN
+            count++;
+        END_IF
+    END_For
+    count++;
+    WRITE(count)        
+END
+ALGORITHM vowels
+VAR
+    str:STRING:="the best in the world"
+    count:INTEGER:=0;
+    vowels:ARRAY_OF CHAR[6]:=["a","o","i" "u","e","y"]
+BEGIN
+    FOR (int i:-0,i<str.length(),i++) DO
+        FOR(int j:-0,i<str.length(),i++))
+        IF(str[i] in vowels[j]) THEN
+            count++;
+        END_IF
+    END_For
+    WRITE(count)        
+END
