@@ -1,0 +1,45 @@
+ALGORITHM Data_Structures
+VAR
+    st1,st2:array_name : ARRAY_OF INTEGER;
+    sum:INTEGER:=0;
+    ext :BOOLEAN/-False;
+BEGIN
+    read(st1);
+    read(st2);
+    FOR i FROM 0 TO  (st1.length)-1 step  DO
+        FOR j FROM 0 to (st2.length)-1 DO
+            IF(st1[i]==st2[j])THEN
+                ext:-true
+            END_IF
+        END_FOR
+        IF ext--false THEN
+            sum:-sum+st1[i]
+        END_IF
+        ext:-false                
+    END_FOR
+    WRITE(sum)
+END
+ALGORITHM dot_product(v1,v2:ARRAY_of Float[50])
+VAR
+    ps: Float:=0;
+BEGIN
+    FOR i FROM 0 TO v1.length  DO
+        ps:=ps(v1[i]*v2[i])
+    END_FOR
+    IF(ps==0)THEN
+        msg:="the 2 vectos are orthogonals"
+    ELSE
+        msg:="the 2 vectors are not orthongonals"
+    END_IF
+    WRITE(msg)    
+END
+ALGORITHM Dot_product
+VAR
+    v1,v2:ARRAY_OF Float[50].V
+BEGIN
+    REPEAT
+        read(v1);
+        read(v2);
+    UNTIL (v1.length==v2.length)
+    dot_product(v1,v2)
+END
