@@ -1,0 +1,27 @@
+FUNCTION palindrome(ch,i,j) : return_type
+VAR
+    i,j:INTEGER
+BEGIN
+    IF (j==i) THEN
+        return TRUE;
+    else if(ch[i]==ch[j]){
+        return palindrome(ch,i+1,j+1);
+    }
+    else
+        return False;   
+
+    END_IF
+END
+ALGORITHM test_palindrome
+VAR
+    ch:CHAR;
+BEGIN
+    READ(ch);
+    n=length(ch);
+    test=palindrome(ch,0,n-1);
+    IF (test) THEN
+        WRITE("it is a palindrome")
+    ELSE
+        WRITE("its not a palindrome")
+    END_IF
+END
