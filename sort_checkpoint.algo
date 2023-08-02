@@ -1,0 +1,27 @@
+FUNCTION insertion(arr)
+VAR
+    i,j,aux:INTEGER;
+BEGIN
+    FOR i FROM 1 TO arr.length DO
+        aux=arr[i];
+        j=i-1;
+        WHILE (j>=0 && aux<arr[j]) DO
+            arr[j+1]=a[j];
+            j=j-1;
+        END_WHILE
+        arr[j+1]=aux;
+    END_FOR
+    RETURN arr ;
+END
+
+
+ALGORITHM Sort_Insertion
+VAR
+    arr,new_arr : ARRAY_OF INTEGER;
+BEGIN
+    READ(arr);
+    new_arrau=insertion(arr);
+    WRITE(new_arr);
+
+    
+END
