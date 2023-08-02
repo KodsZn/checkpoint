@@ -1,4 +1,4 @@
-FUNCTION palindrome(ch,i,j) : return_type
+FUNCTION palindrome(ch,i,j)
 VAR
     i,j:INTEGER
 BEGIN
@@ -15,6 +15,7 @@ END
 ALGORITHM test_palindrome
 VAR
     ch:CHAR;
+    n:INTEGER;
 BEGIN
     READ(ch);
     n=length(ch);
